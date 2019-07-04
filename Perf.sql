@@ -49,7 +49,7 @@ begin
     rnd_ind := round(dbms_random.value(1,10));
     rnd_inde := round(dbms_random.value(1,5));
     rnd_flt := round(dbms_random.value(1000,100000));
-    insert into table_medium
+    insert into table_big
     (INTEGER_NUMBER,FLOAT_NUMBER,RAND_DATE,SMALL_FIXED_STRING,BIG_FIXED_STRING,SMALL_VARIABLE_CHAR,BIG_VARIABLE_CHAR) 
     values (rnd_int,rnd_flt,sysdate-rnd_day, small_fixed(rnd_ind),big_fixed(rnd_inde),small_variable(rnd_ind),big_variable(rnd_inde)); 
   end loop;
